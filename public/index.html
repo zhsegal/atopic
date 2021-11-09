@@ -1,21 +1,170 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="heb">
 
 <head>
   <meta charset="UTF-8">
-  <title>Sheba Allergy Test</title>
+  <title>Atopic Dermatitis Clinic Sheba</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 
 
 <body>
-    <h2>Yeah buddy</title>
-      <form action="/" method="post" >
-        <input type="text" name="question1" placeholder="ID">
-        <input type="text" name="question2" placeholder="Q2">
-        <input type="text" name="question3" placeholder="Q3">
+  <section>
+    <div class="container p-3 my-3 bg-secondary text-white ">
+      <img src='images/sheba.png' class='text-center'>
+      <div class="row justify-content-center mt-5 ">
+        <div class="col-l-12 center-block text-center">
+          <h1>מרפאת אטופיק דרמטיטיס שיבא תל השומר</h1>
+          <h2>POEM שאלון</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container mt-5 p-3 my-3 border  bg-light text-dark">
+
+      <form action="/" method="post">
+
+        <!-- DEMOGRAPHICS-->
+
+        <div class="row justify-content-end">
+
+          <div class="col" align="right">
+            <input type="text" name="AGE">
+            <label for="AGE" class="col-form-label">גיל</label>
+          </div>
+
+          <div class="col" align="right">
+            <input type="text" name="ID">
+            <label for="ID" class="col-form-label">תעודת זהות</label>
+          </div>
+
+          
+
+        </div>
+
+        <div class="row justify-content-end">
+
+          <div class="col" align="right">
+
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="GENDER" id="inlineRadio1" value="option1">
+              <label class="form-check-label" for="inlineRadio1">זכר</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="GENDER" id="inlineRadio2" value="option2">
+              <label class="form-check-label" for="inlineRadio2">נקבה</label>
+            </div>
+            <label for="GENDER" class="col-form-label">מין</label>
+
+
+          </div>
+
+          <div class="col" align="right">
+            <label for="CHRONIC_CONDITIONS" class="col-form-label">:מחלות רקע</label>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="URTICARIA" name="CHRONIC_CONDITIONS">
+              <label class="form-check-label" for="flexCheckDefault">
+                אורטיקריה
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="CHRONIC RHINTIS" name="CHRONIC_CONDITIONS">
+              <label class="form-check-label" for="flexCheckChecked">
+                נזלת כרונית
+              </label>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- POEM-->
+        <!-- Q1-->
+        <div class="row justify-content-end mt-2">
+          <h1">?בשבוע האחרון, במשך כמה ימים הרגשת גרד בעור בשל האקזמה</h1>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col" align="center">
+
+
+            <div class="form-check form-check-inline ml-5">
+              <input class="form-check-input" type="radio" name="POEM1" id="inlineRadio1" value=0>
+              <label class="form-check-label" for="inlineRadio1">0</label>
+            </div>
+
+            <div class="form-check form-check-inline ml-5">
+              <input class="form-check-input" type="radio" name="POEM1" id="inlineRadio2" value=1>
+              <label class="form-check-label" for="inlineRadio2">1-2</label>
+            </div>
+
+            <div class="form-check form-check-inline  ml-5">
+              <input class="form-check-input" type="radio" name="POEM1" id="inlineRadio2" value=2>
+              <label class="form-check-label" for="inlineRadio2">3-4</label>
+            </div>
+
+            <div class="form-check form-check-inline ml-5">
+              <input class="form-check-input" type="radio" name="POEM1" id="inlineRadio2" value=3>
+              <label class="form-check-label" for="inlineRadio2">5-6</label>
+            </div>
+
+            <div class="form-check form-check-inline ml-5">
+              <input class="form-check-input" type="radio" name="POEM1" id="inlineRadio2" value=4>
+              <label class="form-check-label" for="inlineRadio2">בכל יום</label>
+            </div>
+
+
+          </div>
+        </div>
+
+
+        <!-- Q2-->
+        <div class="row justify-content-end mt-2">
+          <h1">?בשבוע האחרון, במשך כמה לילות התקשת לישון בשל האקזמה</h1>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col" align="center">
+
+
+            <div class="form-check form-check-inline ml-5">
+              <input class="form-check-input" type="radio" name="POEM2" id="inlineRadio1" value=0>
+              <label class="form-check-label" for="inlineRadio1">0</label>
+            </div>
+
+            <div class="form-check form-check-inline ml-5">
+              <input class="form-check-input" type="radio" name="POEM2" id="inlineRadio2" value=1>
+              <label class="form-check-label" for="inlineRadio2">1-2</label>
+            </div>
+
+            <div class="form-check form-check-inline  ml-5">
+              <input class="form-check-input" type="radio" name="POEM2" id="inlineRadio2" value=2>
+              <label class="form-check-label" for="inlineRadio2">3-4</label>
+            </div>
+
+            <div class="form-check form-check-inline ml-5">
+              <input class="form-check-input" type="radio" name="POEM2" id="inlineRadio2" value=3>
+              <label class="form-check-label" for="inlineRadio2">5-6</label>
+            </div>
+
+            <div class="form-check form-check-inline ml-5">
+              <input class="form-check-input" type="radio" name="POEM2" id="inlineRadio2" value=4>
+              <label class="form-check-label" for="inlineRadio2">בכל יום</label>
+            </div>
+
+
+          </div>
+        </div>
+
+
+
+
 
         <button type="submit" name="submit">שלח</button>
       </form>
+    </div>
+  </section>
 </body>
 
 </html>

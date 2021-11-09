@@ -39,9 +39,15 @@ app.post('/dr', (req, res) => {
     Patient.find({ PatientID: patID}, function (err, docs) {
         if (err) {
             res.send('error')}
+        
+        else if (docs.length == 0) {
+            res.send('no such patient')
+        }
+
         else{
-            console.log('done')
-            res.render('results',{ID: patID})
+            console.log(docs.length)
+            console.log(docs[0].PatientID)
+            res.render('results',{ID: docs[0].PatientID})
         }
 
 
@@ -52,6 +58,8 @@ app.post('/dr', (req, res) => {
 
 })
 app.post('/', (req, res) => {
+    
+    console.log(req.body)
     var patient=new Patient({
         PatientID:req.body.question1,
             q2: req.body.question2,
