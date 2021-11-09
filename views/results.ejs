@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="heb">
 
 <head>
   <meta charset="UTF-8">
@@ -8,8 +8,20 @@
 
 
 <body>
-    <h1>ID is <%= ID%></h1>
- 
+  <h1 align='right'>דוח מטופל</h1>  
+  <h3 align='right'> <%= ID%> :תז</h3>
+<p align='right'>
+  
+   ,<%= AGE%>  <%- GENDER =='Male' ? 'בן' : 'בת' %> 
+</p>
+<p align='right'>
+  <%= CONDITIONS%> ברקע 
+</p>
+<p align='right'>
+  <%= POEM%>: POEM ציון 
+</p>
+
+
 </body>
 
 </html>
