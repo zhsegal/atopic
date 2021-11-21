@@ -29,7 +29,8 @@ const patientSchema = new mongoose.Schema({
     ACDT3: Number,
     ACDT4: Number,
     ACDT5: Number,
-    ACDT6: Number
+    ACDT6: Number,
+    PRURITUS:Number
    
     
 
@@ -85,7 +86,7 @@ app.post('/dr', (req, res) => {
 
 })
 app.post('/', (req, res) => {
-   
+    console.log(req.body)
     var patient=new Patient({
         PatientID:req.body.ID,
         AGE: req.body.AGE,
@@ -103,7 +104,8 @@ app.post('/', (req, res) => {
         ACDT3: req.body.ACDT3,
         ACDT4: req.body.ACDT4,
         ACDT5: req.body.ACDT5,
-        ACDT6: req.body.ACDT6
+        ACDT6: req.body.ACDT6,
+        PRURITUS:req.body.pruritus
        
 
     })

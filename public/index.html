@@ -18,7 +18,7 @@
       <div class="row justify-content-center mt-5 ">
         <div class="col-l-12 center-block text-center">
           <h1>מרפאת אטופיק דרמטיטיס שיבא תל השומר</h1>
-          <h2>POEM שאלון</h2>
+          <h2>שאלוני הערכת חומרת מחלה</h2>
         </div>
       </div>
     </div>
@@ -29,7 +29,7 @@
 
       <div class="row justify-content-center mt-1 ">
         <div class="col-l-12 center-block text-right">
-          <p>דלקת עור אטופית (אטופיק דרמטיטיס) היא צורה כרונית של אקזמה. זוהי מחלה נפוצה וניתנת לטיפול, אולם
+          <p >דלקת עור אטופית (אטופיק דרמטיטיס) היא צורה כרונית של אקזמה. זוהי מחלה נפוצה וניתנת לטיפול, אולם
             לא תמיד קל לנהל אותה, היא עלולה להשפיע על איכות החיים שלך ביותר מדרך אחת</p>
 
           <p>הינם שאלונים אשר פותחו על מנת לסייע למטופלים ולרופאים שלהם בהבנה מקיפה ויעילה של מחלתם ADCT ו POEM השאלונים
@@ -44,7 +44,7 @@
   <!-- DEMOGRAPHICS-->
   <section>
     <div class="container mt-5 p-3 my-3 border  bg-light text-dark">
-      <div class="row justify-content-end">
+      <div class="form-row justify-content-end">
         <div class="col" align="right">
           <h1>מידע אישי</h1>
         </div>
@@ -55,12 +55,12 @@
 
         <div class="row justify-content-end mt-2">
 
-          <div class="col" align="right">
+          <div class="col" align="center">
             <input type="text" name="AGE">
             <label for="AGE" class="col-form-label">גיל</label>
           </div>
 
-          <div class="col" align="right">
+          <div class="col" align="center">
             <input type="text" name="ID">
             <label for="ID" class="col-form-label">תעודת זהות</label>
           </div>
@@ -70,8 +70,46 @@
         </div>
 
         <div class="row justify-content-end">
+        
+        <!-- Q4-->
+        <div class="col" align="center">
+          <select class="form-select form-select-lg" aria-label=".form-select-lg example" name="pruritus">
+            <option selected>עוצמת גרד</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+          <label for="pruritus" class="col-form-label">:עוצמת גרד בשבוע האחרון</label>
 
-          <div class="col" align="right">
+          
+          <!-- <label for="CHRONIC_CONDITIONS" class="col-form-label">:מחלות רקע</label>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="URTICARIA" name="CHRONIC_CONDITIONS">
+            <label class="form-check-label" for="flexCheckDefault">
+              אורטיקריה
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="CHRONIC RHINTIS" name="CHRONIC_CONDITIONS">
+            <label class="form-check-label" for="flexCheckChecked">
+              נזלת כרונית
+            </label>
+          </div> -->
+
+        </div>
+        <!-- Q4 end-->
+        
+        
+          <!-- Q3-->
+          <div class="col" align="center">
 
 
             <div class="form-check form-check-inline">
@@ -86,23 +124,8 @@
 
 
           </div>
-
-          <div class="col" align="right">
-            <label for="CHRONIC_CONDITIONS" class="col-form-label">:מחלות רקע</label>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="URTICARIA" name="CHRONIC_CONDITIONS">
-              <label class="form-check-label" for="flexCheckDefault">
-                אורטיקריה
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="CHRONIC RHINTIS" name="CHRONIC_CONDITIONS">
-              <label class="form-check-label" for="flexCheckChecked">
-                נזלת כרונית
-              </label>
-            </div>
-
-          </div>
+          <!-- Q3 end-->
+          
         </div>
 
         <!-- POEM-->
@@ -114,7 +137,7 @@
 
         <!-- Q1-->
         <div class="row justify-content-end mt-2">
-          <h1">?בשבוע האחרון, במשך כמה ימים הרגשת גרד בעור בשל האקזמה</h1>
+          <h5>?בשבוע האחרון, במשך כמה ימים הרגשת גרד בעור בשל האקזמה</h5>
         </div>
         <div class="row justify-content-center">
           <div class="col" align="center">
@@ -122,27 +145,27 @@
 
             <div class="form-check form-check-inline ml-5">
               <input class="form-check-input" type="radio" name="POEM1" id="inlineRadio1" value=0>
-              <label class="form-check-label" for="inlineRadio1">0</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio1">0</label>
             </div>
 
             <div class="form-check form-check-inline ml-5">
               <input class="form-check-input" type="radio" name="POEM1" id="inlineRadio2" value=1>
-              <label class="form-check-label" for="inlineRadio2">1-2</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">1-2</label>
             </div>
 
             <div class="form-check form-check-inline  ml-5">
               <input class="form-check-input" type="radio" name="POEM1" id="inlineRadio2" value=2>
-              <label class="form-check-label" for="inlineRadio2">3-4</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">3-4</label>
             </div>
 
             <div class="form-check form-check-inline ml-5">
               <input class="form-check-input" type="radio" name="POEM1" id="inlineRadio2" value=3>
-              <label class="form-check-label" for="inlineRadio2">5-6</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">5-6</label>
             </div>
 
             <div class="form-check form-check-inline ml-5">
               <input class="form-check-input" type="radio" name="POEM1" id="inlineRadio2" value=4>
-              <label class="form-check-label" for="inlineRadio2">בכל יום</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">בכל יום</label>
             </div>
 
 
@@ -152,7 +175,7 @@
 
         <!-- Q2-->
         <div class="row justify-content-end mt-2">
-          <h1">?בשבוע האחרון, במשך כמה לילות התקשת לישון בשל האקזמה</h1>
+          <h5>?בשבוע האחרון, במשך כמה לילות התקשת לישון בשל האקזמה</h5>
         </div>
         <div class="row justify-content-center">
           <div class="col" align="center">
@@ -160,27 +183,27 @@
 
             <div class="form-check form-check-inline ml-5">
               <input class="form-check-input" type="radio" name="POEM2" id="inlineRadio1" value=0>
-              <label class="form-check-label" for="inlineRadio1">0</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio1">0</label>
             </div>
 
             <div class="form-check form-check-inline ml-5">
               <input class="form-check-input" type="radio" name="POEM2" id="inlineRadio2" value=1>
-              <label class="form-check-label" for="inlineRadio2">1-2</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">1-2</label>
             </div>
 
             <div class="form-check form-check-inline  ml-5">
               <input class="form-check-input" type="radio" name="POEM2" id="inlineRadio2" value=2>
-              <label class="form-check-label" for="inlineRadio2">3-4</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">3-4</label>
             </div>
 
             <div class="form-check form-check-inline ml-5">
               <input class="form-check-input" type="radio" name="POEM2" id="inlineRadio2" value=3>
-              <label class="form-check-label" for="inlineRadio2">5-6</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">5-6</label>
             </div>
 
             <div class="form-check form-check-inline ml-5">
               <input class="form-check-input" type="radio" name="POEM2" id="inlineRadio2" value=4>
-              <label class="form-check-label" for="inlineRadio2">בכל יום</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">בכל יום</label>
             </div>
 
 
@@ -189,7 +212,7 @@
 
         <!-- Q3-->
         <div class="row justify-content-end mt-2">
-          <h1">?בשבוע האחרון, במשך כמה ימים סבלת מדימום בשל האקזמה</h1>
+          <h5>?בשבוע האחרון, במשך כמה ימים סבלת מדימום בשל האקזמה</h5>
         </div>
         <div class="row justify-content-center">
           <div class="col" align="center">
@@ -197,27 +220,27 @@
 
             <div class="form-check form-check-inline ml-5">
               <input class="form-check-input" type="radio" name="POEM3" id="inlineRadio1" value=0>
-              <label class="form-check-label" for="inlineRadio1">0</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio1">0</label>
             </div>
 
             <div class="form-check form-check-inline ml-5">
               <input class="form-check-input" type="radio" name="POEM3" id="inlineRadio2" value=1>
-              <label class="form-check-label" for="inlineRadio2">1-2</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">1-2</label>
             </div>
 
             <div class="form-check form-check-inline  ml-5">
               <input class="form-check-input" type="radio" name="POEM3" id="inlineRadio2" value=2>
-              <label class="form-check-label" for="inlineRadio2">3-4</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">3-4</label>
             </div>
 
             <div class="form-check form-check-inline ml-5">
               <input class="form-check-input" type="radio" name="POEM3" id="inlineRadio2" value=3>
-              <label class="form-check-label" for="inlineRadio2">5-6</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">5-6</label>
             </div>
 
             <div class="form-check form-check-inline ml-5">
               <input class="form-check-input" type="radio" name="POEM3" id="inlineRadio2" value=4>
-              <label class="form-check-label" for="inlineRadio2">בכל יום</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">בכל יום</label>
             </div>
 
 
@@ -227,7 +250,7 @@
 
         <!-- Q4-->
         <div class="row justify-content-end mt-2">
-          <h1">?בשבוע האחרון, במשך כמה ימים סבלת מהפרשות של נוזל צלול בשל האקזמה</h1>
+          <h5>?בשבוע האחרון, במשך כמה ימים סבלת מהפרשות של נוזל צלול בשל האקזמה</h5>
         </div>
         <div class="row justify-content-center">
           <div class="col" align="center">
@@ -235,27 +258,27 @@
 
             <div class="form-check form-check-inline ml-5">
               <input class="form-check-input" type="radio" name="POEM4" id="inlineRadio1" value=0>
-              <label class="form-check-label" for="inlineRadio1">0</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio1">0</label>
             </div>
 
             <div class="form-check form-check-inline ml-5">
               <input class="form-check-input" type="radio" name="POEM4" id="inlineRadio2" value=1>
-              <label class="form-check-label" for="inlineRadio2">1-2</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">1-2</label>
             </div>
 
             <div class="form-check form-check-inline  ml-5">
               <input class="form-check-input" type="radio" name="POEM4" id="inlineRadio2" value=2>
-              <label class="form-check-label" for="inlineRadio2">3-4</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">3-4</label>
             </div>
 
             <div class="form-check form-check-inline ml-5">
               <input class="form-check-input" type="radio" name="POEM4" id="inlineRadio2" value=3>
-              <label class="form-check-label" for="inlineRadio2">5-6</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">5-6</label>
             </div>
 
             <div class="form-check form-check-inline ml-5">
               <input class="form-check-input" type="radio" name="POEM4" id="inlineRadio2" value=4>
-              <label class="form-check-label" for="inlineRadio2">בכל יום</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">בכל יום</label>
             </div>
 
 
@@ -264,7 +287,7 @@
 
         <!-- Q5-->
         <div class="row justify-content-end mt-2">
-          <h1">?בשבוע האחרון, במשך כמה ימים סבלת מעור מחורץ בשל האקזמה</h1>
+          <h5>?בשבוע האחרון, במשך כמה ימים סבלת מעור מחורץ בשל האקזמה</h5>
         </div>
         <div class="row justify-content-center">
           <div class="col" align="center">
@@ -272,27 +295,27 @@
 
             <div class="form-check form-check-inline ml-5">
               <input class="form-check-input" type="radio" name="POEM5" id="inlineRadio1" value=0>
-              <label class="form-check-label" for="inlineRadio1">0</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio1">0</label>
             </div>
 
             <div class="form-check form-check-inline ml-5">
               <input class="form-check-input" type="radio" name="POEM5" id="inlineRadio2" value=1>
-              <label class="form-check-label" for="inlineRadio2">1-2</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">1-2</label>
             </div>
 
             <div class="form-check form-check-inline  ml-5">
               <input class="form-check-input" type="radio" name="POEM5" id="inlineRadio2" value=2>
-              <label class="form-check-label" for="inlineRadio2">3-4</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">3-4</label>
             </div>
 
             <div class="form-check form-check-inline ml-5">
               <input class="form-check-input" type="radio" name="POEM5" id="inlineRadio2" value=3>
-              <label class="form-check-label" for="inlineRadio2">5-6</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">5-6</label>
             </div>
 
             <div class="form-check form-check-inline ml-5">
               <input class="form-check-input" type="radio" name="POEM5" id="inlineRadio2" value=4>
-              <label class="form-check-label" for="inlineRadio2">בכל יום</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">בכל יום</label>
             </div>
 
 
@@ -301,7 +324,7 @@
 
         <!-- Q6-->
         <div class="row justify-content-end mt-2">
-          <h1">?בשבוע האחרון, במשך כמה ימים סבלת מעור מתקלף בשל האקזמה</h1>
+          <h5>?בשבוע האחרון, במשך כמה ימים סבלת מעור מתקלף בשל האקזמה</h5>
         </div>
         <div class="row justify-content-center">
           <div class="col" align="center">
@@ -309,27 +332,27 @@
 
             <div class="form-check form-check-inline ml-5">
               <input class="form-check-input" type="radio" name="POEM6" id="inlineRadio1" value=0>
-              <label class="form-check-label" for="inlineRadio1">0</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio1">0</label>
             </div>
 
             <div class="form-check form-check-inline ml-5">
               <input class="form-check-input" type="radio" name="POEM6" id="inlineRadio2" value=1>
-              <label class="form-check-label" for="inlineRadio2">1-2</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">1-2</label>
             </div>
 
             <div class="form-check form-check-inline  ml-5">
               <input class="form-check-input" type="radio" name="POEM6" id="inlineRadio2" value=2>
-              <label class="form-check-label" for="inlineRadio2">3-4</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">3-4</label>
             </div>
 
             <div class="form-check form-check-inline ml-5">
               <input class="form-check-input" type="radio" name="POEM6" id="inlineRadio2" value=3>
-              <label class="form-check-label" for="inlineRadio2">5-6</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">5-6</label>
             </div>
 
             <div class="form-check form-check-inline ml-5">
               <input class="form-check-input" type="radio" name="POEM6" id="inlineRadio2" value=4>
-              <label class="form-check-label" for="inlineRadio2">בכל יום</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">בכל יום</label>
             </div>
 
 
@@ -338,7 +361,7 @@
 
         <!-- Q7-->
         <div class="row justify-content-end mt-2">
-          <h1">?בשבוע האחרון, במשך כמה ימים סבלת מעור יבש בשל האקזמה</h1>
+          <h5>?בשבוע האחרון, במשך כמה ימים סבלת מעור יבש בשל האקזמה</h5>
         </div>
         <div class="row justify-content-center">
           <div class="col" align="center">
@@ -346,27 +369,27 @@
 
             <div class="form-check form-check-inline ml-5">
               <input class="form-check-input" type="radio" name="POEM7" id="inlineRadio1" value=0>
-              <label class="form-check-label" for="inlineRadio1">0</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio1">0</label>
             </div>
 
             <div class="form-check form-check-inline ml-5">
               <input class="form-check-input" type="radio" name="POEM7" id="inlineRadio2" value=1>
-              <label class="form-check-label" for="inlineRadio2">1-2</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">1-2</label>
             </div>
 
             <div class="form-check form-check-inline  ml-5">
               <input class="form-check-input" type="radio" name="POEM7" id="inlineRadio2" value=2>
-              <label class="form-check-label" for="inlineRadio2">3-4</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">3-4</label>
             </div>
 
             <div class="form-check form-check-inline ml-5">
               <input class="form-check-input" type="radio" name="POEM7" id="inlineRadio2" value=3>
-              <label class="form-check-label" for="inlineRadio2">5-6</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">5-6</label>
             </div>
 
             <div class="form-check form-check-inline ml-5">
               <input class="form-check-input" type="radio" name="POEM7" id="inlineRadio2" value=4>
-              <label class="form-check-label" for="inlineRadio2">בכל יום</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">בכל יום</label>
             </div>
 
 
@@ -381,36 +404,36 @@
         </div>
 
         <!-- Q1-->
-        <div class="row justify-content-end mt-2">
-          <h1">?במהלך השבוע האחרון, כיצד היית מדרג את התסמינים הקשורים לאקזמה שלך, לדוגמה גרד, עור יבש, פריחה בעור</h1>
+        <div class="row justify-content-start mt-2">
+          <h5 align='right'>במהלך השבוע האחרון, כיצד היית מדרג את התסמינים הקשורים לאקזמה שלך, לדוגמה גרד, עור יבש, פריחה בעור</h5>
         </div>
         <div class="row justify-content-center">
           <div class="col" align="center">
 
 
-            <div class="form-check form-check-inline ml-5">
+            <div class="form-check form-check-inline ml-3">
               <input class="form-check-input" type="radio" name="ACDT1" id="inlineRadio1" value=0>
-              <label class="form-check-label" for="inlineRadio1">אין כלל</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio1">אין כלל</label>
             </div>
 
-            <div class="form-check form-check-inline ml-5">
+            <div class="form-check form-check-inline ml-3">
               <input class="form-check-input" type="radio" name="ACDT1" id="inlineRadio2" value=1>
-              <label class="form-check-label" for="inlineRadio2">קלים</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">קלים</label>
             </div>
 
-            <div class="form-check form-check-inline  ml-5">
+            <div class="form-check form-check-inline  ml-3">
               <input class="form-check-input" type="radio" name="ACDT1" id="inlineRadio2" value=2>
-              <label class="form-check-label" for="inlineRadio2">מתונים</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">מתונים</label>
             </div>
 
-            <div class="form-check form-check-inline ml-5">
+            <div class="form-check form-check-inline ml-3">
               <input class="form-check-input" type="radio" name="ACDT1" id="inlineRadio2" value=3>
-              <label class="form-check-label" for="inlineRadio2">חמורים</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">חמורים</label>
             </div>
 
-            <div class="form-check form-check-inline ml-5">
+            <div class="form-check form-check-inline ml-3">
               <input class="form-check-input" type="radio" name="ACDT1" id="inlineRadio2" value=4>
-              <label class="form-check-label" for="inlineRadio2">חמורים מאוד</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">חמורים מאוד</label>
             </div>
 
 
@@ -418,7 +441,7 @@
         </div>
         <!-- Q2-->
         <div class="row justify-content-end mt-2">
-          <h1">?במהלך השבוע האחרון, בכמה מן הימים היו לך אירועים אינטנסיביים של גרד בשל האקזמה שלך</h1>
+          <h5 align='right'>במהלך השבוע האחרון, בכמה מן הימים היו לך אירועים אינטנסיביים של גרד בשל האקזמה שלך</h5>
         </div>
         <div class="row justify-content-center">
           <div class="col" align="center">
@@ -426,27 +449,27 @@
 
             <div class="form-check form-check-inline ml-5">
               <input class="form-check-input" type="radio" name="ACDT2" id="inlineRadio1" value=0>
-              <label class="form-check-label" for="inlineRadio1">כלל לא</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio1">כלל לא</label>
             </div>
 
             <div class="form-check form-check-inline ml-5">
               <input class="form-check-input" type="radio" name="ACDT2" id="inlineRadio2" value=1>
-              <label class="form-check-label" for="inlineRadio2"> 1-2 </label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2"> 1-2 </label>
             </div>
 
             <div class="form-check form-check-inline  ml-5">
               <input class="form-check-input" type="radio" name="ACDT2" id="inlineRadio2" value=2>
-              <label class="form-check-label" for="inlineRadio2">3-4</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">3-4</label>
             </div>
 
             <div class="form-check form-check-inline ml-5">
               <input class="form-check-input" type="radio" name="ACDT2" id="inlineRadio2" value=3>
-              <label class="form-check-label" for="inlineRadio2">5-6</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">5-6</label>
             </div>
 
             <div class="form-check form-check-inline ml-5">
               <input class="form-check-input" type="radio" name="ACDT2" id="inlineRadio2" value=4>
-              <label class="form-check-label" for="inlineRadio2">כל יום</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">כל יום</label>
             </div>
 
 
@@ -455,33 +478,33 @@
 
         <!-- Q3-->
         <div class="row justify-content-end mt-2">
-          <h1">?במהלך השבוע האחרון, עד כמה היית מוטרד בשל האקזמה שלך</h1>
+          <h5>?במהלך השבוע האחרון, עד כמה היית מוטרד בשל האקזמה שלך</h5>
         </div>
         <div class="row justify-content-center">
           <div class="col" align="center">
 
 
-            <div class="form-check form-check-inline ml-5">
+            <div class="form-check form-check-inline ml-3">
               <input class="form-check-input" type="radio" name="ACDT3" id="inlineRadio1" value=0>
-              <label class="form-check-label" for="inlineRadio1">כלל לא</label>
+              <label class="form-check-label " for="inlineRadio1">כלל לא</label>
             </div>
 
-            <div class="form-check form-check-inline ml-5">
+            <div class="form-check form-check-inline ml-3">
               <input class="form-check-input" type="radio" name="ACDT3" id="inlineRadio2" value=1>
               <label class="form-check-label" for="inlineRadio2">במידה מועטה</label>
             </div>
 
-            <div class="form-check form-check-inline  ml-5">
+            <div class="form-check form-check-inline  ml-3">
               <input class="form-check-input" type="radio" name="ACDT3" id="inlineRadio2" value=2>
               <label class="form-check-label" for="inlineRadio2">במידה בינונית</label>
             </div>
 
-            <div class="form-check form-check-inline ml-5">
+            <div class="form-check form-check-inline ml-3">
               <input class="form-check-input" type="radio" name="ACDT3" id="inlineRadio2" value=3>
               <label class="form-check-label" for="inlineRadio2">במידה רבה</label>
             </div>
 
-            <div class="form-check form-check-inline ml-5">
+            <div class="form-check form-check-inline ml-3">
               <input class="form-check-input" type="radio" name="ACDT3" id="inlineRadio2" value=4>
               <label class="form-check-label" for="inlineRadio2">במידה רבה מאוד</label>
             </div>
@@ -491,8 +514,8 @@
         </div>
 
         <!-- Q4-->
-        <div class="row justify-content-end mt-2">
-          <h1">?במהלך השבוע האחרון, בכמה מן הלילות התקשית להירדם או להישאר ישן בשל האקזמה שלך</h1>
+        <div class="row justify-content-end mt-3">
+          <h5 align='right'>במהלך השבוע האחרון, בכמה מן הלילות התקשית להירדם או להישאר ישן בשל האקזמה שלך</h5>
         </div>
         <div class="row justify-content-center">
           <div class="col" align="center">
@@ -500,27 +523,27 @@
 
             <div class="form-check form-check-inline ml-5">
               <input class="form-check-input" type="radio" name="ACDT4" id="inlineRadio1" value=0>
-              <label class="form-check-label" for="inlineRadio1">אף לילה</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio1">אף לילה</label>
             </div>
 
             <div class="form-check form-check-inline ml-5">
               <input class="form-check-input" type="radio" name="ACDT4" id="inlineRadio2" value=1>
-              <label class="form-check-label" for="inlineRadio2">1-2</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">1-2</label>
             </div>
 
             <div class="form-check form-check-inline  ml-5">
               <input class="form-check-input" type="radio" name="ACDT4" id="inlineRadio2" value=2>
-              <label class="form-check-label" for="inlineRadio2">3-4</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">3-4</label>
             </div>
 
             <div class="form-check form-check-inline ml-5">
               <input class="form-check-input" type="radio" name="ACDT4" id="inlineRadio2" value=3>
-              <label class="form-check-label" for="inlineRadio2">5-6</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">5-6</label>
             </div>
 
             <div class="form-check form-check-inline ml-5">
               <input class="form-check-input" type="radio" name="ACDT4" id="inlineRadio2" value=4>
-              <label class="form-check-label" for="inlineRadio2">בכל לילה</label>
+              <label class="form-check-label col-form-label-lg" for="inlineRadio2">בכל לילה</label>
             </div>
 
 
@@ -529,33 +552,33 @@
 
         <!-- Q5-->
         <div class="row justify-content-end mt-2">
-          <h1">?במהלך השבוע האחרון, עד כמה השפיעה האקזמה שלך על פעילויותיך היומיומיות</h1>
+          <h5>?במהלך השבוע האחרון, עד כמה השפיעה האקזמה שלך על פעילויותיך היומיומיות</h5>
         </div>
         <div class="row justify-content-center">
           <div class="col" align="center">
 
 
-            <div class="form-check form-check-inline ml-5">
+            <div class="form-check form-check-inline ml-3">
               <input class="form-check-input" type="radio" name="ACDT5" id="inlineRadio1" value=0>
               <label class="form-check-label" for="inlineRadio1">כלל לא</label>
             </div>
 
-            <div class="form-check form-check-inline ml-5">
+            <div class="form-check form-check-inline ml-3">
               <input class="form-check-input" type="radio" name="ACDT5" id="inlineRadio2" value=1>
               <label class="form-check-label" for="inlineRadio2">במידה מועטה</label>
             </div>
 
-            <div class="form-check form-check-inline  ml-5">
+            <div class="form-check form-check-inline  ml-3">
               <input class="form-check-input" type="radio" name="ACDT5" id="inlineRadio2" value=2>
               <label class="form-check-label" for="inlineRadio2">במידה בינונית</label>
             </div>
 
-            <div class="form-check form-check-inline ml-5">
+            <div class="form-check form-check-inline ml-3">
               <input class="form-check-input" type="radio" name="ACDT5" id="inlineRadio2" value=3>
               <label class="form-check-label" for="inlineRadio2">במידה רבה</label>
             </div>
 
-            <div class="form-check form-check-inline ml-5">
+            <div class="form-check form-check-inline ml-3">
               <input class="form-check-input" type="radio" name="ACDT5" id="inlineRadio2" value=4>
               <label class="form-check-label" for="inlineRadio2">במידה רבה מאוד</label>
             </div>
@@ -565,34 +588,34 @@
         </div>
 
         <!-- Q6-->
-        <div class="row justify-content-end mt-2">
-          <h1">?במהלך השבוע האחרון עד כמה השפיעה האקזמה שלך על מצב הרוח שלך או על רגשותיך</h1>
+        <div class="row justify-content-end mt-4">
+          <h5 align='right'>במהלך השבוע האחרון עד כמה השפיעה האקזמה שלך על מצב הרוח שלך או על רגשותיך</h5>
         </div>
         <div class="row justify-content-center">
           <div class="col" align="center">
 
 
-            <div class="form-check form-check-inline ml-5">
+            <div class="form-check form-check-inline ml-3">
               <input class="form-check-input" type="radio" name="ACDT6" id="inlineRadio1" value=0>
               <label class="form-check-label" for="inlineRadio1"> כלל לא</label>
             </div>
 
-            <div class="form-check form-check-inline ml-5">
+            <div class="form-check form-check-inline ml-3">
               <input class="form-check-input" type="radio" name="ACDT6" id="inlineRadio2" value=1>
               <label class="form-check-label" for="inlineRadio2">במידה מועטה</label>
             </div>
 
-            <div class="form-check form-check-inline  ml-5">
+            <div class="form-check form-check-inline  ml-3">
               <input class="form-check-input" type="radio" name="ACDT6" id="inlineRadio2" value=2>
               <label class="form-check-label" for="inlineRadio2">במידה בינונית</label>
             </div>
 
-            <div class="form-check form-check-inline ml-5">
+            <div class="form-check form-check-inline ml-3">
               <input class="form-check-input" type="radio" name="ACDT6" id="inlineRadio2" value=3>
               <label class="form-check-label" for="inlineRadio2">במידה רבה</label>
             </div>
 
-            <div class="form-check form-check-inline ml-5">
+            <div class="form-check form-check-inline ml-3">
               <input class="form-check-input" type="radio" name="ACDT6" id="inlineRadio2" value=4>
               <label class="form-check-label" for="inlineRadio2">במידה רבה מאוד</label>
             </div>
@@ -601,7 +624,12 @@
           </div>
         </div>
           <!-- BUTTON-->
-        <button type="submit" name="submit">שלח</button>
+          <div class="row justify-content-center mt-5">
+            <div class="col" align="center">
+          <button type="submit" name="submit">שלח</button>
+
+          </div>
+          </div>
       </form>
     </div>
   </section>
