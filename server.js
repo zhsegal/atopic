@@ -113,7 +113,7 @@ app.post('/', (req, res) => {
 
     patient.save()
     console.log(patient)
-    res.send('ok thats amayzing')
+    res.send('תודה על מילוי השאלון!')
 
 })
 
