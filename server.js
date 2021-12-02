@@ -7,7 +7,7 @@ const app = express()
 const port = process.env.PORT || 3000;
 
 
-const mongoURI = "mongodb+srv://admin-zvika:5293612@cluster0.krwkt.mongodb.net/atopic";
+const mongoURI = "mongodb+srv://admin-zvika:52XXX12@cluster0.krwkt.mongodb.net/atopic";
 
 
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
