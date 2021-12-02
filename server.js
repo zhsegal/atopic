@@ -48,6 +48,16 @@ app.get('/', (req, res) => {
     res.sendFile('public/index.html', { root: __dirname })
 });
 
+app.get('/try', (req, res) => {
+    var data = [
+        { id: 'מה קורה אחי', a1: "טוב", a2:'רע',name:'P1' },
+        { id: 'מה קורה בלך', a1: "חי", a2:'גע',name:'P2' },
+        { id: 'מה קורה גבר', a1: "יייי", a2:'גגג',name:'P3' },
+    ];
+    res.render('home',{data})
+});
+
+
 app.get('/dr', (req, res) => {
     res.sendFile('public/dr.html', { root: __dirname })
 });
@@ -64,15 +74,18 @@ app.post('/dr', (req, res) => {
 
         else{
             var poem_score=docs[0].POEM1+docs[0].POEM2+docs[0].POEM3+docs[0].POEM4+docs[0].POEM5+docs[0].POEM6+docs[0].POEM7
-            
-            console.log(docs.length)
+            var acdt_score=docs[0].ACDT1+docs[0].ACDT2+docs[0].ACDT3+docs[0].ACDT4+docs[0].ACDT5+docs[0].ACDT6
+
+
+          
             console.log(docs[0].PatientID)
             res.render('results',
             {ID: docs[0].PatientID,
             AGE:docs[0].AGE,
             GENDER:docs[0].GENDER,
-            CONDITIONS:docs[0].Chornic_conditions,
-            POEM: poem_score
+            PRURITUS:docs[0].PRURITUS,
+            POEM: poem_score,
+            ACDT: acdt_score
 
             
             })
@@ -114,6 +127,15 @@ app.post('/', (req, res) => {
     patient.save()
     console.log(patient)
     res.send('תודה על מילוי השאלון!')
+
+})
+
+app.post('/try', (req, res) => {
+    console.log(req.body)
+   
+    
+
+    res.send(req.body)
 
 })
 

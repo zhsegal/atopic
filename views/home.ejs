@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="heb">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Atopic Dermatitis Clinic Sheba</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+
+<body>
+    <!-- HEADER-->
+
+    <section>
+        <div class="container p-3 my-3 bg-secondary text-white ">
+            <img src='images/sheba.png' class='text-center'>
+            <div class="row justify-content-center mt-5 ">
+                <div class="col-l-12 center-block text-center">
+                    <h1>מרפאת אטופיק דרמטיטיס שיבא תל השומר</h1>
+                    <h2>שאלוני הערכת חומרת מחלה</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container p-3 my-3 bg-light text-dark ">
+
+            <div class="row justify-content-center mt-1 ">
+                <div class="col-l-12 center-block text-right">
+                    <p style="font-size:160%">דלקת עור אטופית (אטופיק דרמטיטיס) היא צורה כרונית של אקזמה. זוהי מחלה
+                        נפוצה וניתנת לטיפול, אולם
+                        לא תמיד קל לנהל אותה, היא עלולה להשפיע על איכות החיים שלך ביותר מדרך אחת</p>
+
+                    <p style="font-size:160%"> השאלונים המופיעים באתר זה הינם שאלונים אשר פותחו על מנת לסייע למטופלים
+                        ולרופאים שלהם בהבנה מקיפה ויעילה של מחלתם
+                    </p>
+                    <p style="font-size:160%">התשובות שלך לשאלונים יסייעו לרופא שלך או לאחות להבין יותר טוב את צרכי
+                        הטיפול שלך</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- DEMOGRAPHICS-->
+    <section>
+        <div class="container mt-5 p-3 my-3 border  bg-light text-dark">
+            <div class="form-row justify-content-end">
+                <div class="col" align="right">
+                    <h1>מידע אישי</h1>
+                </div>
+            </div>
+            <form action="/try" method="post">
+
+
+
+                <div class="row justify-content-end mt-2">
+
+                    <div class="col" align="center">
+                        <input type="text" name="AGE">
+                        <label for="AGE" class="col-form-label col-form-label-lg">גיל</label>
+                    </div>
+
+                    <div class="col" align="center">
+                        <input type="text" name="ID">
+                        <label for="ID" class="col-form-label col-form-label-lg">תעודת זהות</label>
+                    </div>
+
+
+
+                </div>
+
+                <div class="row justify-content-end">
+
+                    <!-- Q4-->
+                    <div class="col" align="center">
+                        <select class="form-select form-select-lg" aria-label=".form-select-lg example" name="pruritus">
+
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                        <label for="pruritus" class="col-form-label col-form-label-lg">:עוצמת גרד ממוצע בשבוע
+                            האחרון</label>
+
+
+                        <!-- <label for="CHRONIC_CONDITIONS" class="col-form-label">:מחלות רקע</label>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="URTICARIA" name="CHRONIC_CONDITIONS">
+            <label class="form-check-label" for="flexCheckDefault">
+              אורטיקריה
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="CHRONIC RHINTIS" name="CHRONIC_CONDITIONS">
+            <label class="form-check-label" for="flexCheckChecked">
+              נזלת כרונית
+            </label>
+          </div> -->
+
+                    </div>
+                    <!-- Q4 end-->
+
+
+                    <!-- Q3-->
+                    <div class="col" align="center">
+
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="GENDER" id="inlineRadio1" value="Male">
+                            <label class="form-check-label col-form-label-lg" for="inlineRadio1">זכר</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="GENDER" id="inlineRadio2" value="Female">
+                            <label class="form-check-label col-form-label-lg" for="inlineRadio2">נקבה</label>
+                        </div>
+                        <label for="GENDER" class="col-form-label col-form-label-lg">מין</label>
+
+
+                    </div>
+                    <!-- Q3 end-->
+
+                </div>
+                <!-- POEM-->
+                <!-- Qs-->
+                <% for(var i=0; i < data.length; i++) { %>
+                    <div class="row justify-content-end mt-2">
+                        <h5>
+                            <%= data[i].id %>
+                        </h5>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col" align="center">
+
+
+                            <div class="form-check form-check-inline ml-5">
+                                <input class="form-check-input" type="radio" name=<%=data[i].name %> id="inlineRadio1"
+                                value=0>
+                                <label class="form-check-label col-form-label-lg" for="inlineRadio1">
+                                    <%= data[i].a1 %>
+                                </label>
+                            </div>
+
+                            <div class="form-check form-check-inline ml-5">
+                                <input class="form-check-input" type="radio" name=<%=data[i].name %> id="inlineRadio2"
+                                value=1>
+                                <label class="form-check-label col-form-label-lg" for="inlineRadio2">
+                                    <%= data[i].a2 %>
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <% } %>
+                        <!-- END Qs-->
+                        <!-- BUTTON-->
+                        <div class="row justify-content-center mt-5">
+                            <div class="col" align="center">
+                                <button type="submit" name="submit">שלח</button>
+
+                            </div>
+                        </div>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
