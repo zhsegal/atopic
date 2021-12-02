@@ -128,12 +128,25 @@ app.post('/dr', (req, res) => {
 
 
           
-            console.log(docs[0].PatientID)
+            console.log(docs[0])
+            
             res.render('results',
-            {ID: docs[0].PatientID,
-            AGE:docs[0].AGE,
-            GENDER:docs[0].GENDER,
+            {ID: docs[0].PatientID,            
             PRURITUS:docs[0].PRURITUS,
+            POEM1: docs[0].POEM1,
+            POEM2: docs[0].POEM2,
+            POEM3: docs[0].POEM3,
+            POEM4: docs[0].POEM4,
+            POEM5: docs[0].POEM5,
+            POEM6: docs[0].POEM6,
+            POEM7: docs[0].POEM7,
+            ADCT1: docs[0].ACDT1,
+            ADCT2: docs[0].ACDT2,
+            ADCT3: docs[0].ACDT3,
+            ADCT4: docs[0].ACDT4,
+            ADCT5: docs[0].ACDT5,
+            ADCT6: docs[0].ACDT6,
+
             POEM: poem_score,
             ACDT: acdt_score
 
