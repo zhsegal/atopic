@@ -52,7 +52,7 @@
                     <h1>מידע אישי</h1>
                 </div>
             </div>
-            <form action="/try" method="post">
+            <form action="/" method="post">
 
 
 
@@ -133,10 +133,10 @@
                 </div>
                 <!-- POEM-->
                 <!-- Qs-->
-                <% for(var i=0; i < data.length; i++) { %>
+                <% for(var i=0; i < poem.length; i++) { %>
                     <div class="row justify-content-end mt-2">
                         <h5>
-                            <%= data[i].id %>
+                            <%= poem[i].id %>
                         </h5>
                     </div>
 
@@ -145,18 +145,18 @@
 
 
                             <div class="form-check form-check-inline ml-5">
-                                <input class="form-check-input" type="radio" name=<%=data[i].name %> id="inlineRadio1"
+                                <input class="form-check-input" type="radio" name=<%=poem[i].name %> id="inlineRadio1"
                                 value=0>
                                 <label class="form-check-label col-form-label-lg" for="inlineRadio1">
-                                    <%= data[i].a1 %>
+                                    <%= poem[i].a1 %>
                                 </label>
                             </div>
 
                             <div class="form-check form-check-inline ml-5">
-                                <input class="form-check-input" type="radio" name=<%=data[i].name %> id="inlineRadio2"
+                                <input class="form-check-input" type="radio" name=<%=poem[i].name %> id="inlineRadio2"
                                 value=1>
                                 <label class="form-check-label col-form-label-lg" for="inlineRadio2">
-                                    <%= data[i].a2 %>
+                                    <%= poem[i].a2 %>
                                 </label>
                             </div>
 
@@ -166,6 +166,44 @@
 
                     <% } %>
                         <!-- END Qs-->
+                        
+                        <!-- ACDR-->
+                <!-- Qs-->
+                <% for(var i=0; i < adct.length; i++) { %>
+                    <div class="row justify-content-end mt-2">
+                        <h5>
+                            <%= adct[i].id %>
+                        </h5>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col" align="center">
+
+
+                            <div class="form-check form-check-inline ml-5">
+                                <input class="form-check-input" type="radio" name=<%=adct[i].name %> id="inlineRadio1"
+                                value=0>
+                                <label class="form-check-label col-form-label-lg" for="inlineRadio1">
+                                    <%= adct[i].a1 %>
+                                </label>
+                            </div>
+
+                            <div class="form-check form-check-inline ml-5">
+                                <input class="form-check-input" type="radio" name=<%=adct[i].name %> id="inlineRadio2"
+                                value=1>
+                                <label class="form-check-label col-form-label-lg" for="inlineRadio2">
+                                    <%= adct[i].a2 %>
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <% } %>
+                        <!-- END Qs-->
+                        
+
                         <!-- BUTTON-->
                         <div class="row justify-content-center mt-5">
                             <div class="col" align="center">
