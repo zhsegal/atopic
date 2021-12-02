@@ -29,15 +29,17 @@
 
             <div class="row justify-content-center mt-1 ">
                 <div class="col-l-12 center-block text-right">
-                    <p style="font-size:160%">דלקת עור אטופית (אטופיק דרמטיטיס) היא צורה כרונית של אקזמה. זוהי מחלה
-                        נפוצה וניתנת לטיפול, אולם
-                        לא תמיד קל לנהל אותה, היא עלולה להשפיע על איכות החיים שלך ביותר מדרך אחת</p>
+                    <p style="font-size:160%">
+                        דלקת עור אטופית (אטופיק דרמטיטיס) היא צורה כרונית של אקזמה. זוהי מחלה נפוצה וניתנת לטיפול, אולם
+                        לא תמיד קל לנהל אותה, היא עלולה להשפיע על איכות החיים שלך ביותר מדרך אחת
+                    </p>
 
                     <p style="font-size:160%"> השאלונים המופיעים באתר זה הינם שאלונים אשר פותחו על מנת לסייע למטופלים
-                        ולרופאים שלהם בהבנה מקיפה ויעילה של מחלתם
+                        ולרופאים שלהם בהבנה מקיפה ויעילה של מחלתם.
+                        התשובות שלך לשאלונים יסייעו לרופא שלך להבין יותר טוב את צרכי
+                        הטיפול שלך ואת השפעת הטיפול שניתן
                     </p>
-                    <p style="font-size:160%">התשובות שלך לשאלונים יסייעו לרופא שלך או לאחות להבין יותר טוב את צרכי
-                        הטיפול שלך</p>
+
                 </div>
             </div>
         </div>
@@ -52,86 +54,85 @@
                     <h1>מידע אישי</h1>
                 </div>
             </div>
+            
             <form action="/" method="post">
 
+                <!-- Q2-->
 
-
-                <div class="row justify-content-end mt-2">
-
-                    <div class="col" align="center">
-                        <input type="text" name="AGE">
-                        <label for="AGE" class="col-form-label col-form-label-lg">גיל</label>
-                    </div>
-
+                <div class="row justify-content-center mt-2">
                     <div class="col" align="center">
                         <input type="text" name="ID">
                         <label for="ID" class="col-form-label col-form-label-lg">תעודת זהות</label>
                     </div>
-
-
-
                 </div>
 
-                <div class="row justify-content-end">
-
-                    <!-- Q4-->
-                    <div class="col" align="center">
-                        <select class="form-select form-select-lg" aria-label=".form-select-lg example" name="pruritus">
-
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
-                        <label for="pruritus" class="col-form-label col-form-label-lg">:עוצמת גרד ממוצע בשבוע
-                            האחרון</label>
-
-
-                        <!-- <label for="CHRONIC_CONDITIONS" class="col-form-label">:מחלות רקע</label>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="URTICARIA" name="CHRONIC_CONDITIONS">
-            <label class="form-check-label" for="flexCheckDefault">
-              אורטיקריה
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="CHRONIC RHINTIS" name="CHRONIC_CONDITIONS">
-            <label class="form-check-label" for="flexCheckChecked">
-              נזלת כרונית
-            </label>
-          </div> -->
-
+                <!-- Q1 end-->
+                <!-- Q2-->
+                
+                
+                <div class="row justify-content-center mt-2">
+                    <label for="pruritus" class="col-form-label col-form-label-lg">:עוצמת גרד ממוצע בשבוע
+                        האחרון</label>
                     </div>
-                    <!-- Q4 end-->
-
-
-                    <!-- Q3-->
+                    <div class="row justify-content-center mt-2">
                     <div class="col" align="center">
-
-
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="GENDER" id="inlineRadio1" value="Male">
-                            <label class="form-check-label col-form-label-lg" for="inlineRadio1">זכר</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="GENDER" id="inlineRadio2" value="Female">
-                            <label class="form-check-label col-form-label-lg" for="inlineRadio2">נקבה</label>
-                        </div>
-                        <label for="GENDER" class="col-form-label col-form-label-lg">מין</label>
-
-
+                            <input class="form-check-input" type="radio" name="pruritus" id="inlineRadio1" value=0>
+                            <label class="form-check-label" for="inlineRadio1">0</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="pruritus" id="inlineRadio2" value=1>
+                            <label class="form-check-label" for="inlineRadio2">1</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="pruritus" id="inlineRadio3" value=2>
+                            <label class="form-check-label" for="inlineRadio3">2</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="pruritus" id="inlineRadio1" value=3>
+                            <label class="form-check-label" for="inlineRadio1">3</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="pruritus" id="inlineRadio2" value=4>
+                            <label class="form-check-label" for="inlineRadio2">4</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="pruritus" id="inlineRadio3" value=5>
+                            <label class="form-check-label" for="inlineRadio3">5</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="pruritus" id="inlineRadio1" value=6>
+                            <label class="form-check-label" for="inlineRadio1">6</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="pruritus" id="inlineRadio2" value=7>
+                            <label class="form-check-label" for="inlineRadio2">7</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="pruritus" id="inlineRadio3" value=8>
+                            <label class="form-check-label" for="inlineRadio3">8</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="pruritus" id="inlineRadio3" value=9>
+                            <label class="form-check-label" for="inlineRadio3">9</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="pruritus" id="inlineRadio3" value=10>
+                            <label class="form-check-label" for="inlineRadio3">10</label>
+                          </div>
+                        
                     </div>
-                    <!-- Q3 end-->
+                    <!-- Q2 end-->
+
+
 
                 </div>
                 <!-- POEM-->
+                <div class="row justify-content-end my-3">
+                    <div class="col" align="right">
+                        <h1>POEM שאלון</h1>
+                    </div>
+                </div>
                 <!-- Qs-->
                 <% for(var i=0; i < poem.length; i++) { %>
                     <div class="row justify-content-end mt-2">
@@ -152,6 +153,13 @@
                                 </label>
                             </div>
 
+
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col" align="center">
+
                             <div class="form-check form-check-inline ml-5">
                                 <input class="form-check-input" type="radio" name=<%=poem[i].name %> id="inlineRadio2"
                                 value=1>
@@ -159,58 +167,157 @@
                                     <%= poem[i].a2 %>
                                 </label>
                             </div>
-
                         </div>
                     </div>
 
-
-                    <% } %>
-                        <!-- END Qs-->
-                        
-                        <!-- ACDR-->
-                <!-- Qs-->
-                <% for(var i=0; i < adct.length; i++) { %>
-                    <div class="row justify-content-end mt-2">
-                        <h5>
-                            <%= adct[i].id %>
-                        </h5>
-                    </div>
-
-                    <div class="row justify-content-center">
-                        <div class="col" align="center">
-
+                            <div class="row justify-content-center">
+                                <div class="col" align="center">
 
                             <div class="form-check form-check-inline ml-5">
-                                <input class="form-check-input" type="radio" name=<%=adct[i].name %> id="inlineRadio1"
-                                value=0>
+                                <input class="form-check-input" type="radio" name=<%=poem[i].name %> id="inlineRadio1"
+                                value=2>
                                 <label class="form-check-label col-form-label-lg" for="inlineRadio1">
-                                    <%= adct[i].a1 %>
+                                    <%= poem[i].a3 %>
                                 </label>
                             </div>
-
-                            <div class="form-check form-check-inline ml-5">
-                                <input class="form-check-input" type="radio" name=<%=adct[i].name %> id="inlineRadio2"
-                                value=1>
-                                <label class="form-check-label col-form-label-lg" for="inlineRadio2">
-                                    <%= adct[i].a2 %>
-                                </label>
-                            </div>
-
                         </div>
                     </div>
+                            <div class="row justify-content-center">
+                                <div class="col" align="center">
 
+                            <div class="form-check form-check-inline ml-5">
+                                <input class="form-check-input" type="radio" name=<%=poem[i].name %> id="inlineRadio1"
+                                value=3>
+                                <label class="form-check-label col-form-label-lg" for="inlineRadio1">
+                                    <%= poem[i].a4 %>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="row justify-content-center">
+                                <div class="col" align="center">
+
+                            <div class="form-check form-check-inline ml-5">
+                                <input class="form-check-input" type="radio" name=<%=poem[i].name %> id="inlineRadio1"
+                                value=4>
+                                <label class="form-check-label col-form-label-lg" for="inlineRadio1">
+                                    <%= poem[i].a5 %>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                      
 
                     <% } %>
                         <!-- END Qs-->
-                        
 
-                        <!-- BUTTON-->
-                        <div class="row justify-content-center mt-5">
-                            <div class="col" align="center">
-                                <button type="submit" name="submit">שלח</button>
+                        <!-- ACDT-->
 
+                        <div class="row justify-content-end my-3">
+                            <div class="col" align="right">
+                                <h1>ADCT שאלון</h1>
                             </div>
                         </div>
+                        <!-- Qs-->
+                        <% for(var i=0; i < adct.length; i++) { %>
+                            <div class="row mt-2" align="right">
+                                <div class="col" align="right">
+                                    <h5>
+                                        <%= adct[i].id %>
+                                    </h5>
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-center">
+                                <div class="col" align="center">
+
+
+                                    <div class="form-check form-check-inline ml-5">
+                                        <input class="form-check-input" type="radio" name=<%=adct[i].name %>
+                                        id="inlineRadio1"
+                                        value=0>
+                                        <label class="form-check-label col-form-label-lg" for="inlineRadio1">
+                                            <%= adct[i].a1 %>
+                                        </label>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                                    
+                                    <div class="row justify-content-center">
+                                        <div class="col" align="center">
+        
+                                    <div class="form-check form-check-inline ml-5">
+                                        <input class="form-check-input" type="radio" name=<%=adct[i].name %>
+                                        id="inlineRadio2"
+                                        value=1>
+                                        <label class="form-check-label col-form-label-lg" for="inlineRadio2">
+                                            <%= adct[i].a2 %>
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                                    <div class="row justify-content-center">
+                                        <div class="col" align="center">
+        
+
+                                    <div class="form-check form-check-inline ml-5">
+                                        <input class="form-check-input" type="radio" name=<%=adct[i].name %>
+                                        id="inlineRadio1"
+                                        value=2>
+                                        <label class="form-check-label col-form-label-lg" for="inlineRadio1">
+                                            <%= adct[i].a3 %>
+                                        </label>
+                                    </div>
+
+                                    
+                                </div>
+                            </div>
+
+                                    <div class="row justify-content-center">
+                                        <div class="col" align="center">
+        
+                                    <div class="form-check form-check-inline ml-5">
+                                        <input class="form-check-input" type="radio" name=<%=adct[i].name %>
+                                        id="inlineRadio1"
+                                        value=3>
+                                        <label class="form-check-label col-form-label-lg" for="inlineRadio1">
+                                            <%= adct[i].a4 %>
+                                        </label>
+                                    </div>
+
+                                    
+                                </div>
+                            </div>
+                                    
+                                    <div class="row justify-content-center">
+                                        <div class="col" align="center">
+        
+                                    <div class="form-check form-check-inline ml-5">
+                                        <input class="form-check-input" type="radio" name=<%=adct[i].name %>
+                                        id="inlineRadio1"
+                                        value=4>
+                                        <label class="form-check-label col-form-label-lg" for="inlineRadio1">
+                                            <%= adct[i].a5 %>
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <% } %>
+                                <!-- END Qs-->
+
+
+                                <!-- BUTTON-->
+                                <div class="row justify-content-center mt-5">
+                                    <div class="col" align="center">
+                                        <button type="submit" name="submit">שלח</button>
+
+                                    </div>
+                                </div>
             </form>
         </div>
     </section>

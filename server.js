@@ -13,10 +13,7 @@ const mongoURI = "mongodb+srv://admin-zvika:5293612@cluster0.krwkt.mongodb.net/a
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
 
 const patientSchema = new mongoose.Schema({
-    PatientID: String,
-    AGE: Number,
-    GENDER: String,
-    Chornic_conditions:[{}],
+    PatientID: String,    
     POEM1: Number,
     POEM2: Number,
     POEM3: Number,
@@ -46,21 +43,35 @@ app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
     var poem = [
-        { id: 'מה קורה אחי', a1: "טוב", a2:'רע',name:'POEM1' },
-        { id: 'מה קורה בלך', a1: "חי", a2:'גע',name:'POEM2' },
-        { id: 'מה קורה גבר', a1: "יייי", a2:'גגג',name:'POEM3' },
-        { id: 'מה קורה גבר', a1: "יייי", a2:'גגג',name:'POEM4' },
-        { id: 'מה קורה גבר', a1: "יייי", a2:'גגג',name:'POEM5' },
-        { id: 'מה קורה גבר', a1: "יייי", a2:'גגג',name:'POEM6' },
-        { id: 'מה קורה גבר', a1: "יייי", a2:'גגג',name:'POEM7' },
+        { id: '?בשבוע האחרון, במשך כמה ימים הרגשת גרד בעור בשל האקזמה',
+         a1: "0", a2:'1-2',a3: '3-4',a4:'5-6', a5:'בכל יום',name:'POEM1' },
+        { id: '?בשבוע האחרון, במשך כמה לילות התקשת לישון בשל האקזמה',
+        a1: "0", a2:'1-2',a3: '3-4',a4:'5-6', a5:'בכל יום',name:'POEM2' },
+        { id: '?בשבוע האחרון, במשך כמה ימים סבלת מדימום בשל האקזמה',
+        a1: "0", a2:'1-2',a3: '3-4',a4:'5-6', a5:'בכל יום',name:'POEM3' },
+        { id: '?בשבוע האחרון, במשך כמה ימים סבלת מהפרשות של נוזל צלול בשל האקזמה', 
+        a1: "0", a2:'1-2',a3: '3-4',a4:'5-6', a5:'בכל יום',name:'POEM4' },
+        { id: '?בשבוע האחרון, במשך כמה ימים סבלת מעור מחורץ בשל האקזמה',
+        a1: "0", a2:'1-2',a3: '3-4',a4:'5-6', a5:'בכל יום',name:'POEM5' },
+        { id: '?בשבוע האחרון, במשך כמה ימים סבלת מעור מתקלף בשל האקזמה',
+        a1: "0", a2:'1-2',a3: '3-4',a4:'5-6', a5:'בכל יום',name:'POEM6' },
+        { id: '?בשבוע האחרון, במשך כמה ימים סבלת מעור יבש בשל האקזמה',
+        a1: "0", a2:'1-2',a3: '3-4',a4:'5-6', a5:'בכל יום',name:'POEM7' },
     ];
 
     var adct = [
-        { id: 'מה קורה ggי', a1: "טוב", a2:'רע',name:'ACDT1' },
-        { id: 'ggg קורה בלך', a1: "חי", a2:'גע',name:'ACDT2' },
-        { id: 'מהggg קורה גבר', a1: "יייי", a2:'גגג',name:'ACDT3' },
-        { id: 'מה קggורה גבר', a1: "יייי", a2:'גגג',name:'ACDT4' },
-        { id: 'מה קggורה גבר', a1: "יייי", a2:'גגג',name:'ACDT5' },       
+        { id: 'במהלך השבוע האחרון, כיצד היית מדרג את התסמינים הקשורים לאקזמה שלך - לדוגמה גרד, עור יבש, פריחה בעור',
+         a1: "אין כלל", a2:'קלים',a3: 'מתונים',a4:'חמורים', a5:'חמורים מאוד',name:'ACDT1' },
+        { id: 'במהלך השבוע האחרון, בכמה מן הימים היו לך אירועים אינטנסיביים של גרד בשל האקזמה שלך',
+         a1: "כלל לא", a2:'1-2',a3: '3-4',a4:'5-6', a5:'כל יום',name:'ACDT2' },
+        { id: '?במהלך השבוע האחרון, עד כמה היית מוטרד בשל האקזמה שלך', 
+        a1: "כלל לא", a2:'במידה מועטה',a3: 'במידה בינונית',a4:'במידה רבה', a5:'במידה רבה מאוד',name:'ACDT3' },
+        { id: 'במהלך השבוע האחרון, בכמה מן הלילות התקשית להירדם או להישאר ישן בשל האקזמה שלך',
+        a1: "אף לילה", a2:'1-2',a3: '3-4',a4:'5-6', a5:'כל לילה',name:'ACDT4' },
+        { id: 'במהלך השבוע האחרון, עד כמה השפיעה האקזמה שלך על פעילויותיך היומיומיות',
+        a1: "כלל לא", a2:'במידה מועטה',a3: 'במידה בינונית',a4:'במידה רבה', a5:'במידה רבה מאוד',name:'ACDT5' },
+        { id: 'במהלך השבוע האחרון, עד כמה השפיעה האקזמה שלך על מצב הרוח שלך או רגשותיך',
+        a1: "כלל לא", a2:'במידה מועטה',a3: 'במידה בינונית',a4:'במידה רבה', a5:'במידה רבה מאוד',name:'ACDT6' },       
     ];
     res.render('home',{poem,adct})
 });
@@ -69,10 +80,7 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
     console.log(req.body)
     var patient=new Patient({
-        PatientID:req.body.ID,
-        AGE: req.body.AGE,
-        GENDER: req.body.GENDER,
-        Chornic_conditions: req.body.CHRONIC_CONDITIONS,
+        PatientID:req.body.ID,        
         POEM1: req.body.POEM1,
         POEM2: req.body.POEM2,
         POEM3: req.body.POEM3,
@@ -95,7 +103,7 @@ app.post('/', (req, res) => {
     patient.save()
     console.log('patient:')
     console.log(patient)
-    res.send(req.body)
+    res.send(patient)
 
 })
 
