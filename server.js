@@ -7,7 +7,7 @@ const app = express()
 const port = process.env.PORT || 3000;
 
 
-const mongoURI = "mongodb+srv://admin-zvika:52XXX12@cluster0.krwkt.mongodb.net/atopic";
+const mongoURI = "mongodb+srv://admin-zvika:5293612@cluster0.krwkt.mongodb.net/atopic";
 
 
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -27,7 +27,8 @@ const patientSchema = new mongoose.Schema({
     ACDT4: Number,
     ACDT5: Number,
     ACDT6: Number,
-    PRURITUS:Number
+    PRURITUS:Number,
+    TIME: Date
    
     
 
@@ -79,6 +80,8 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
     console.log(req.body)
+    var time=Date.now()
+
     var patient=new Patient({
         PatientID:req.body.ID,        
         POEM1: req.body.POEM1,
@@ -94,8 +97,9 @@ app.post('/', (req, res) => {
         ACDT4: req.body.ACDT4,
         ACDT5: req.body.ACDT5,
         ACDT6: req.body.ACDT6,
-        PRURITUS:req.body.pruritus
-       
+        PRURITUS:req.body.pruritus,
+        TIME: time
+
 
     })
     
@@ -126,7 +130,6 @@ app.post('/dr', (req, res) => {
             var poem_score=docs[0].POEM1+docs[0].POEM2+docs[0].POEM3+docs[0].POEM4+docs[0].POEM5+docs[0].POEM6+docs[0].POEM7
             var acdt_score=docs[0].ACDT1+docs[0].ACDT2+docs[0].ACDT3+docs[0].ACDT4+docs[0].ACDT5+docs[0].ACDT6
 
-
           
             console.log(docs[0])
             
@@ -148,8 +151,7 @@ app.post('/dr', (req, res) => {
             ADCT6: docs[0].ACDT6,
 
             POEM: poem_score,
-            ACDT: acdt_score
-
+            ACDT: acdt_score,
             
             })
         }
