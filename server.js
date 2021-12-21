@@ -7,7 +7,7 @@ const app = express()
 const port = process.env.PORT || 3000;
 
 
-const mongoURI = "mongodb+srv://admin-zvika:5293612@cluster0.krwkt.mongodb.net/atopic";
+const mongoURI = "mongodb+srv://admin-zvika:52****2@cluster0.krwkt.mongodb.net/atopic";
 
 
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -28,7 +28,7 @@ const patientSchema = new mongoose.Schema({
     ACDT5: Number,
     ACDT6: Number,
     PRURITUS:Number,
-    TIME: Date
+    TIME: String
    
     
 
@@ -80,7 +80,10 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
     console.log(req.body)
-    var time=Date.now()
+    var year=new Date().getDate().toString()
+    var day=new Date().getFullYear().toString()
+    var month=new Date().getMonth().toString()
+    var time= year +'-'+ month + '-' + day
 
     var patient=new Patient({
         PatientID:req.body.ID,        
@@ -102,8 +105,8 @@ app.post('/', (req, res) => {
 
 
     })
-    
-
+    console.log ('Pat:')
+    console.log(((time)))
     patient.save()
     console.log('patient:')
     console.log(patient)
@@ -115,6 +118,8 @@ app.post('/', (req, res) => {
 app.get('/dr', (req, res) => {
     res.sendFile('public/dr.html', { root: __dirname })
 });
+
+// CREATE EJS WITH TABLE
 
 app.post('/dr', (req, res) => {
     var patID = req.body.ID   
@@ -130,25 +135,12 @@ app.post('/dr', (req, res) => {
             var poem_score=docs[0].POEM1+docs[0].POEM2+docs[0].POEM3+docs[0].POEM4+docs[0].POEM5+docs[0].POEM6+docs[0].POEM7
             var acdt_score=docs[0].ACDT1+docs[0].ACDT2+docs[0].ACDT3+docs[0].ACDT4+docs[0].ACDT5+docs[0].ACDT6
 
-          
-            console.log(docs[0])
+            console.log('docs:')
+            console.log((docs))
             
-            res.render('results',
-            {ID: docs[0].PatientID,            
-            PRURITUS:docs[0].PRURITUS,
-            POEM1: docs[0].POEM1,
-            POEM2: docs[0].POEM2,
-            POEM3: docs[0].POEM3,
-            POEM4: docs[0].POEM4,
-            POEM5: docs[0].POEM5,
-            POEM6: docs[0].POEM6,
-            POEM7: docs[0].POEM7,
-            ADCT1: docs[0].ACDT1,
-            ADCT2: docs[0].ACDT2,
-            ADCT3: docs[0].ACDT3,
-            ADCT4: docs[0].ACDT4,
-            ADCT5: docs[0].ACDT5,
-            ADCT6: docs[0].ACDT6,
+            res.render('results_table',
+            {pats:docs,
+           
 
             POEM: poem_score,
             ACDT: acdt_score,
@@ -163,6 +155,58 @@ app.post('/dr', (req, res) => {
    
 
 })
+
+// CREATE EJS WITH A SINGLE ENTRY
+
+
+// app.post('/dr', (req, res) => {
+//     var patID = req.body.ID   
+//     Patient.find({ PatientID: patID}, function (err, docs) {
+//         if (err) {
+//             res.send('error')}
+        
+//         else if (docs.length == 0) {
+//             res.send('no such patient')
+//         }
+
+//         else{
+//             var poem_score=docs[0].POEM1+docs[0].POEM2+docs[0].POEM3+docs[0].POEM4+docs[0].POEM5+docs[0].POEM6+docs[0].POEM7
+//             var acdt_score=docs[0].ACDT1+docs[0].ACDT2+docs[0].ACDT3+docs[0].ACDT4+docs[0].ACDT5+docs[0].ACDT6
+
+          
+//             console.log(docs[0])
+            
+//             res.render('results',
+//             {pats:docs,
+//             ID: docs[0].PatientID,            
+//             PRURITUS:docs[0].PRURITUS,
+//             POEM1: docs[0].POEM1,
+//             POEM2: docs[0].POEM2,
+//             POEM3: docs[0].POEM3,
+//             POEM4: docs[0].POEM4,
+//             POEM5: docs[0].POEM5,
+//             POEM6: docs[0].POEM6,
+//             POEM7: docs[0].POEM7,
+//             ADCT1: docs[0].ACDT1,
+//             ADCT2: docs[0].ACDT2,
+//             ADCT3: docs[0].ACDT3,
+//             ADCT4: docs[0].ACDT4,
+//             ADCT5: docs[0].ACDT5,
+//             ADCT6: docs[0].ACDT6,
+
+//             POEM: poem_score,
+//             ACDT: acdt_score,
+            
+//             })
+//         }
+
+
+
+//     });
+
+   
+
+// })
 
 
 

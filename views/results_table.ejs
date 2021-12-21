@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="heb">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sheba Allergy Test</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+
+<body>
+  <p><%= pats %></p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">אינדקס</th>
+
+        <th scope="col">תז</th>
+        <th scope="col">תאריך</th>
+
+        <th scope="col">גרד</th>
+        <th scope="col">POEM 1</th>
+        <th scope="col">POEM 2</th>
+        <th scope="col">POEM 3</th>
+        <th scope="col">POEM 4</th>
+        <th scope="col">POEM 5</th>
+        <th scope="col">POEM 6</th>
+        <th scope="col">POEM 7</th>
+        <th scope="col">ACDT 1</th>
+        <th scope="col">POEM 1</th>
+        <th scope="col">POEM 3</th>
+        <th scope="col">ACDT 4</th>
+        <th scope="col">POEM 5</th>
+        <th scope="col">POEM 6</th>
+      </tr>
+    </thead>
+    
+    
+    <tbody>
+<% pats.forEach(function(pat,index) { %>
+    <tr>
+      <th scope="row"><%= index %></th>
+      <td><%= pat.PatientID %></td>
+      <td><%= pat.TIME %></td>
+      <td><%= pat.PRURITUS %></td> 
+      <td><%= pat.POEM1 %></td>
+      <td><%= pat.POEM2 %></td> 
+      <td><%= pat.POEM3 %></td>
+      <td><%= pat.POEM4 %></td> 
+      <td><%= pat.POEM5 %></td> 
+      <td><%= pat.POEM6 %></td>
+      <td><%= pat.POEM7 %></td>
+      <td><%= pat.ACDT1 %></td>
+      <td><%= pat.ACDT2 %></td> 
+      <td><%= pat.ACDT3 %></td>
+      <td><%= pat.ACDT4 %></td> 
+      <td><%= pat.ACDT5 %></td> 
+      <td><%= pat.ACDT6 %></td>
+    </tr>
+  <% }); %> 
+</tbody>
+</table>
+
+<!-- OPTINAL - IF WANTS TO EXPAND AN INDEX -->
+
+<!-- <section>
+  <div class="row justify-content-center mt-2">
+    <div class="col" align="right">
+      <h5>?האם תרצה להרחיב את אחד השאלונים</h5>
+    </div>
+  </div>
+  <form action="/expand" method="post">
+
+</form>
+</section> -->
+
+
+</body>
+
+</html>
