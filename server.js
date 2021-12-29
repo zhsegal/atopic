@@ -7,7 +7,7 @@ const app = express()
 const port = process.env.PORT || 3000;
 
 
-const mongoURI = "mongodb+srv://admin-zvika:52****2@cluster0.krwkt.mongodb.net/atopic";
+const mongoURI = "mongodb+srv://admin-zvika:5293612@cluster0.krwkt.mongodb.net/atopic";
 
 
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -136,6 +136,7 @@ app.post('/dr', (req, res) => {
             var acdt_score=docs[0].ACDT1+docs[0].ACDT2+docs[0].ACDT3+docs[0].ACDT4+docs[0].ACDT5+docs[0].ACDT6
 
             console.log('docs:')
+            console.log(typeof(docs[0]))
             console.log((docs))
             
             res.render('results_table',
