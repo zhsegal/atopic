@@ -82,8 +82,9 @@ app.post('/', (req, res) => {
     console.log(req.body)
     var year=new Date().getDate().toString()
     var day=new Date().getFullYear().toString()
-    var month=new Date().getMonth().toString()
-    var time= year +'-'+ month + '-' + day
+    var month=new Date().getMonth()
+    var monthi= month + 1
+    var time= year +'-'+ monthi + '-' + day
 
     var patient=new Patient({
         PatientID:req.body.ID,        
