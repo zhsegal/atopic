@@ -11,6 +11,8 @@
 
 <body>
   <h1 align='center'> טבלת מעקב מטופלים</h1>
+  <p><%= pats %></p>
+
   <table class="table mt-5">
     <thead>
       <tr>
@@ -20,6 +22,7 @@
         <th scope="col">תאריך</th>
 
         <th scope="col">גרד</th>
+        <th scope="col">כאב</th>
         <th scope="col">POEM</th>
         <th scope="col">ימי גרד</th>
         <th scope="col">לילות גרד</th>
@@ -47,6 +50,7 @@
       <td><%= pat.PatientID %></td>
       <td><%= pat.TIME %></td>
       <td><%= pat.PRURITUS %></td> 
+      <td><%= pat.PAIN %></td> 
       <td><%= pat.POEM1 + pat.POEM2 + pat.POEM3 + pat.POEM4+ pat.POEM5+pat.POEM6+pat.POEM7%></td>
       <td><%= pat.POEM1%></td>
       <td><%= pat.POEM2 %></td> 

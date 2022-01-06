@@ -28,6 +28,7 @@ const patientSchema = new mongoose.Schema({
     ACDT5: Number,
     ACDT6: Number,
     PRURITUS:Number,
+    PAIN: Number,
     TIME: String
    
     
@@ -102,12 +103,12 @@ app.post('/', (req, res) => {
         ACDT5: req.body.ACDT5,
         ACDT6: req.body.ACDT6,
         PRURITUS:req.body.pruritus,
+        PAIN: req.body.pain,
         TIME: time
 
 
     })
-    console.log ('Pat:')
-    console.log(((time)))
+   
     patient.save()
     console.log('patient:')
     console.log(patient)
